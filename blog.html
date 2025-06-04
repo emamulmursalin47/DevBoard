@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBoard - Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-blue-50 min-h-screen pt-10 text-gray-800">
+    <nav
+      class="flex justify-between items-center bg-white mx-auto h-[100px] w-[1536px] px-5 py-10 rounded-lg shadow-md"
+    >
+      <div class="flex items-center space-x-2">
+        <div
+          class="w-8 h-8 bg-primary rounded-md flex items-center justify-center"
+        >
+          <span class="text-white font-bold text-lg">D</span>
+        </div>
+        <span class="text-2xl text-Black">Dev </span>
+        <span class="font-bold text-2xl">Board</span>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <button 
+          id="backToHome"
+          class="bg-[#3752FD] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#2942E0] transition-colors"
+        >
+          Back to Desk
+        </button>
+      </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto mt-8 px-4">
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Blogs</h1>
+        
+        <div class="space-y-8">
+          <!-- Blog Question 1 -->
+          <div class="border-b border-gray-200 pb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+              Question-1: What are the different ways to select an element in the DOM?
+            </h2>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="text-gray-700 leading-relaxed">
+                There are several methods to select elements in the DOM using JavaScript. The most common ones include getElementById() for selecting by ID, getElementsByClassName() for selecting by class name, getElementsByTagName() for selecting by tag name, querySelector() for selecting using CSS selectors, and querySelectorAll() for selecting multiple elements. Each method has its specific use cases and performance characteristics depending on your needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Blog Question 2 -->
+          <div class="border-b border-gray-200 pb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+              Question-2: What is the difference between innerHTML, innerText, and textContent?
+            </h2>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="text-gray-700 leading-relaxed">
+                innerHTML returns or sets the HTML content inside an element, including all HTML tags. innerText returns or sets the visible text content, respecting styling and excluding hidden elements. textContent returns or sets all text content including hidden elements but excluding HTML tags. Understanding these differences is crucial for proper DOM manipulation and avoiding security vulnerabilities like XSS attacks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Blog Question 3 -->
+          <div class="border-b border-gray-200 pb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+              Question-3: What is event delegation in the DOM?
+            </h2>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="text-gray-700 leading-relaxed">
+                Event delegation is a technique where you attach a single event listener to a parent element to handle events for its child elements. This takes advantage of event bubbling, where events propagate up the DOM tree. It's particularly useful for handling events on dynamically created elements and improving performance by reducing the number of event listeners needed.
+              </p>
+            </div>
+          </div>
+
+          <!-- Blog Question 4 -->
+          <div class="border-b border-gray-200 pb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+              Question-4: What is event bubbling in the DOM?
+            </h2>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="text-gray-700 leading-relaxed">
+                Event bubbling is the process where an event starts from the target element and bubbles up through its parent elements in the DOM hierarchy. When an event occurs on an element, it first runs the handlers on that element, then on its parent, then all the way up to the document object. This behavior can be controlled using stopPropagation() method and is fundamental to understanding event delegation patterns.
+              </p>
+            </div>
+          </div>
+
+          <!-- Blog Question 5 -->
+          <div class="border-b border-gray-200 pb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+              Question-5: How do you create and append elements to the DOM?
+            </h2>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="text-gray-700 leading-relaxed">
+                Creating and appending elements involves using document.createElement() to create new elements, setting their properties and content, and then using methods like appendChild(), insertBefore(), or append() to add them to the DOM. You can also set attributes, add event listeners, and modify styling before or after appending. Modern approaches also include using insertAdjacentHTML() for inserting HTML strings at specific positions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Blog Question 6 -->
+          <div class="pb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+              Question-6: What are the differences between var, let, and const in JavaScript?
+            </h2>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="text-gray-700 leading-relaxed">
+                var has function scope and is hoisted, allowing redeclaration and reassignment. let has block scope, is hoisted but not initialized (temporal dead zone), allows reassignment but not redeclaration in the same scope. const also has block scope, must be initialized at declaration, and cannot be reassigned (though objects and arrays can be mutated). Understanding these differences is essential for writing reliable JavaScript code and avoiding common pitfalls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Handle back to home navigation
+      document.getElementById('backToHome').addEventListener('click', () => {
+        window.location.href = 'index.html';
+      });
+    </script>
+  </body>
+</html>
